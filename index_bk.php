@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<title>PHP</title>
+</head>
+<body>
+<header>
+<h1 class="font-weight-normal">PHP</h1>    
+</header>
+
+<main>
+<h2>Practice</h2>
+<pre>
+<?php
+try {
+  $db = new PDO('mysql:dbname=mydb;host=127.0.0.1;charset=utf8',
+  'root', '');
+}catch(PDOException $e){
+  echo 'DB接続エラー:' . $e->getMessage();
+}
+
+// INSERT
+//$count = $db->exec('INSERT INTO my_items SET maker_id=1, item_name="もも",
+//price=210, keyword="缶詰、ピンク、甘い"');
+//echo $count . '件のデータを挿入した';
+
+// SELECT
+// execは結果件数、queryは結果を返す
+//$records = $db->query('SELECT * FROM my_items');
+//while($record = $records->fetch()){
+//  print($record['item_name'] . "\n");
+//}
+
+?>
+</pre>
+</main>
+</body>    
+</html>
